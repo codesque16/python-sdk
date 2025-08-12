@@ -161,6 +161,7 @@ class ServerSession(
                             )
                         )
                     )
+                    self._initialization_state = InitializationState.Initialized
             case _:
                 if self._initialization_state != InitializationState.Initialized:
                     raise RuntimeError("Received request before initialization was complete")
